@@ -65,14 +65,14 @@ function App() {
         <h3 className="pr-head">Projects</h3>
         <div className="main-pr">
           <div className="tabs">
-            <Card title="Muzzer" link="https://github.com/SarvT/muzica" />
-            <Card title="Muzzer" link="https://github.com/SarvT/muzica" />
-            <Card title="Muzzer" link="https://github.com/SarvT/muzica" />
+            <Card title="PoojaBox" link="https://pooja-box.vercel.app/" img="/assets/poojabox-img.png"/>
+            <Card title="ZueCare" link="https://zuecare.vercel.app/" img="/assets/zue-img.png"/>
+            <Card title="Squenner" link="https://squenner-sarvts-projects.vercel.app/" img="/assets/squenner-img.png"/>
           </div>
           <div className="tabs">
-            <Card title="Muzzer" link="https://github.com/SarvT/muzica" />
-            <Card title="Muzzer" link="https://github.com/SarvT/muzica" />
-            <Card title="Muzzer" link="https://github.com/SarvT/muzica" />
+            <Card title="Labily" link="https://labily.vercel.app/" img="/assets/labily-img.png"/>
+            <Card title="VizzyFy" link="https://vizzyfy.vercel.app/" img="/assets/vizzfy-img.png"/>
+            <Card title="Muzica" link="https://github.com/SarvT/muzica" img="/assets/muzica-img.png"/>
           </div>
         </div>
         <h3 className="cnt-head">Contact Me</h3>
