@@ -1,16 +1,13 @@
-// import React from "react";
-// import { handleOnSubmit } from "./ContactForm.js";
 import emailjs from "emailjs-com";
 
 export const Contact = () => {
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        process.env.SERVICE_ID,
-        process.env.TEMPLATE_ID,
-        e.target,
-        process.env.PUBLIC_KEY
+    emailjs.sendForm(
+      import.meta.env.VITE_SERVICE_ID,
+      import.meta.env.VITE_TEMPLATE_ID,
+      e.target as HTMLFormElement,
+      import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -22,7 +19,7 @@ export const Contact = () => {
           alert("Something went wrong!");
         }
       );
-    e.target.reset();
+    e.currentTarget.reset();
   };
   return (
     <div>

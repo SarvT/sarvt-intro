@@ -1,11 +1,12 @@
-const handleOnSubmit = (e) => {
+import emailjs from "emailjs-com";
+
+const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
-  emailjs
-    .sendForm(
-      process.env.SERVICE_ID,
-      process.env.TEMPLATE_ID,
-      e.target,
-      process.env.PUBLIC_KEY
+  emailjs.sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        e.target as HTMLFormElement,
+        import.meta.env.VITE_PUBLIC_KEY
     )
     .then(
       (result) => {
@@ -17,6 +18,6 @@ const handleOnSubmit = (e) => {
         alert("Something went wrong!");
       }
     );
-  e.target.reset();
+  e.currentTarget.reset();
 };
 export { handleOnSubmit };
